@@ -1,5 +1,5 @@
 {
-    'name': 'My First Module',
+    'name': 'Library Management',
     'version': '19.0.1.0.0',
     'category': 'Services',
     'summary': 'A brief description of the module',

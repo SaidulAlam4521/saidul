@@ -13,3 +13,16 @@ class LibraryBook(models.Model):
     pages = fields.Integer(string='Number of Pages')
     description = fields.Text(string='Description')
     active = fields.Boolean(string='Active', default=True)
+    category = fields.Selection(
+        selection=[
+            ("fiction", "Fiction"),
+            ("non_fiction", "Non-Fiction"),
+            ("science", "Science"),
+            ("history", "History"),
+            ("other", "Other"),
+        ],
+        string="Category",
+        default="other",
+        required=True,
+    )
+    price = fields.Float(string="Price", digits=(16, 2), default=0.0)
