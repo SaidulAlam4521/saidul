@@ -1,0 +1,29 @@
+<odoo>
+    <record id="library_borrow_view_form" model="ir.ui.view">
+        <field name="name">library.borrow.form</field>
+        <field name="model">library.borrow</field>
+        <field name="arch" type="xml">
+            <form string="Book Borrowing">
+                <group>
+                    <field name="book_id"/>
+                    <field name="borrower"/>
+                    <field name="borrow_date"/>
+                    <field name="return_date"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="library_borrow_view_tree" model="ir.ui.view">
+        <field name="name">library.borrow.tree</field>
+        <field name="model">library.borrow</field>
+        <field name="arch" type="xml">
+            <tree string="Borrow History">
+                <field name="book_id"/>
+                <field name="borrower"/>
+                <field name="borrow_date"/>
+                <field name="return_date"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

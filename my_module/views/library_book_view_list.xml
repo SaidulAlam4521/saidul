@@ -1,0 +1,13 @@
+<record id="library_book_view_list" model="ir.ui.view">
+    <field name="name">library.book.list</field>
+    <field name="model">library.book</field>
+    <field name="arch" type="xml">
+        <list string="Books" decoration-danger="state == 'lost'" decoration-success="state == 'available'">
+            <field name="name"/>
+            <field name="author_ids" widget="many2many_tags"/>
+            <field name="isbn"/>
+            <field name="pages"/>
+            <field name="state" decoration-info="state == 'draft'" decoration-success="state == 'available'" widget="badge"/>
+        </list>
+    </field>
+</record>
